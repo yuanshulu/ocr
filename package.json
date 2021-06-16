@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "concurrently \"node ocr.js\" \"vue-cli-service serve\" ",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.2.0",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "node-tesseract-ocr": "^2.2.1",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
